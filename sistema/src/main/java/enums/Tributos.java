@@ -2,7 +2,7 @@ package enums;
 
 public enum Tributos {
 
-    DECIMO_TERCEIRO(0.08), FGTS(0.08), FERIAS(0.08), INSS(0.09);
+    DECIMO_TERCEIRO(12.0), FGTS(0.08), FERIAS(3.0), INSS(0.09);
     
     private Double valor;
 
@@ -14,6 +14,7 @@ public enum Tributos {
 public Double getValor() {
     return valor;
 }
+
     
 }
 

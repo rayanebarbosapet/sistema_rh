@@ -1,6 +1,6 @@
 package interfaces;
 
-import enums.Salario;
+
 
 public interface Calculo {
            
@@ -10,6 +10,14 @@ public interface Calculo {
     }
 
     default void calculoinss(){
+
+    }
+
+    default void calculoDecTer(){
+        
+    }
+
+    default void calculoFerias(){
         
     }
     }
