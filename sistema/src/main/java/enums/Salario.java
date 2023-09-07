@@ -2,15 +2,15 @@ package enums;
 
 public enum Salario {
     
-    ATENDENTE(new double []{1440.0}), SUPERVISOR(new double []{1600.0}), GERENTE(new double[]{2000.0});
+    ATENDENTE(1440.0), SUPERVISOR(1600.0), GERENTE(2000.0);
     
-    private double[] salario;
+    private double salario;
      
-    private Salario(double[] salario) {
+    private Salario(double salario) {
         this.salario = salario;
     }
 
-    public double[] getSalario() {
+    public double getSalario() {
         return salario;
     }
      
