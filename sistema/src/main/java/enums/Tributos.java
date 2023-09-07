@@ -1,5 +1,4 @@
 package enums;
-import enums.Salario;
 
 public enum Tributos {
 

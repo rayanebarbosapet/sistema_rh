@@ -1,16 +1,20 @@
 package pessoas;
 
 import java.util.Date;
+import interfaces.Calculo;
+import enums.*;
 
-public class Gerente extends Funcionarios {
+public class Gerente extends Funcionarios implements Calculo {
 
     private String totalFuncionarios;
     private String senhaEspecial;
+    private Salario Salario;
+    private Tributos Valor;
    
  
 
     public Gerente(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user,
-            String Key, String totalFuncionarios, String senhaEspecial) {
+            String Key, String totalFuncionarios, String senhaEspecial, Salario salario, Tributos valor) {
         super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key);
         this.totalFuncionarios = totalFuncionarios;
         this.senhaEspecial = senhaEspecial;
@@ -23,6 +27,18 @@ public class Gerente extends Funcionarios {
     public String getSenhaEspecial() {
         return senhaEspecial;
     }
+
+    @Override
+   public void calculofgts() {
+
+        double salarioAtendente = Salario.GERENTE.getSalario();
+        double valorFGTS = Valor.FGTS.getValor();
+    
+        double totalFgts = salarioAtendente * valorFGTS;
+
+        System.out.println("Total do FGTS do Atendente: " + totalFgts);
+    }
+
     
     
 }
