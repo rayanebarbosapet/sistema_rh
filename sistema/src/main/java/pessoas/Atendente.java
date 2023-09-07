@@ -11,8 +11,8 @@ public class Atendente extends Funcionarios implements Calculo{
     private Tributos Valor;
 
     public Atendente(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user,
-            String Key, String codigo, Salario salario, Tributos getvalor) {
-        super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key);
+            String Key, String codigo, Salario salario, Tributos getvalor, int mesesTrabalhados) {
+        super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key, mesesTrabalhados);
         this.codigo = codigo;
     }
 
@@ -35,7 +35,16 @@ public class Atendente extends Funcionarios implements Calculo{
         System.out.println("Total do FGTS do Atendente: " + totalFgts);
     }
 
-  
+ @Override
+    public void calculoinss() {
+
+        double salarioAtendente = Salario.ATENDENTE.getSalario();
+        double valorINSS = Valor.INSS.getValor();
+    
+        double totalINSS = salarioAtendente * valorINSS;
+
+        System.out.println("Total do FGTS do Atendente: " + totalINSS);
+    }  
    
 }
 

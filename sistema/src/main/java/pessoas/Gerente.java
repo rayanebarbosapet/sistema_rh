@@ -14,8 +14,8 @@ public class Gerente extends Funcionarios implements Calculo {
  
 
     public Gerente(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user,
-            String Key, String totalFuncionarios, String senhaEspecial, Salario salario, Tributos valor) {
-        super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key);
+            String Key, String totalFuncionarios, String senhaEspecial, Salario salario, Tributos valor, int mesesTrabalhados) {
+        super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key, mesesTrabalhados);
         this.totalFuncionarios = totalFuncionarios;
         this.senhaEspecial = senhaEspecial;
     }
@@ -39,6 +39,15 @@ public class Gerente extends Funcionarios implements Calculo {
         System.out.println("Total do FGTS do Atendente: " + totalFgts);
     }
 
+    @Override
+    public void calculoinss() {
+
+        double salarioAtendente = Salario.GERENTE.getSalario();
+        double valorINSS = Valor.INSS.getValor();
     
+        double totalINSS = salarioAtendente * valorINSS;
+
+        System.out.println("Total do FGTS do Atendente: " + totalINSS); 
     
+}
 }

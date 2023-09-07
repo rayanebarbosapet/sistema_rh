@@ -8,12 +8,14 @@ public abstract class Funcionarios extends Pessoas {
     private Date datadeAdmissao;
     private String user;
     private String key;
+    private int mesesTrabalhados;
    
-    public Funcionarios(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user, String Key) {
+    public Funcionarios(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user, String Key,int mesesTrabalhados) {
         super(nome, cpf, tel);
         this.id = id;
         this.cargo = cargo;
         this.datadeAdmissao = datadeAdmissao;
+        this.mesesTrabalhados = mesesTrabalhados;
     }
 
     public String getCargo() {
@@ -39,6 +41,15 @@ public abstract class Funcionarios extends Pessoas {
     public String getKey() {
         return key;
     }
+
+    public int getMesesTrabalhados() {
+        return mesesTrabalhados;
+    }
+
+    public void setMesesTrabalhados(int mesesTrabalhados) {
+        this.mesesTrabalhados = mesesTrabalhados;
+    }
+    
 
     
     

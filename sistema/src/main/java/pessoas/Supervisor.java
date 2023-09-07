@@ -11,8 +11,8 @@ public class Supervisor extends Funcionarios implements Calculo {
     private Tributos Valor;
 
     public Supervisor(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user,
-            String Key, String codigo, Salario salario, Tributos Valor) {
-        super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key);
+            String Key, String codigo, Salario salario, Tributos Valor, int mesesTrabalhados) {
+        super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key, mesesTrabalhados);
         this.codigo = codigo;
     }
 
@@ -34,6 +34,15 @@ public class Supervisor extends Funcionarios implements Calculo {
 
         System.out.println("Total do FGTS do Atendente: " + totalFgts);
     }
+    @Override
+    public void calculoinss() {
 
+        double salarioAtendente = Salario.SUPERVISOR.getSalario();
+        double valorINSS = Valor.INSS.getValor();
     
+        double totalINSS = salarioAtendente * valorINSS;
+
+        System.out.println("Total do FGTS do Atendente: " + totalINSS);
+    
+}
 }

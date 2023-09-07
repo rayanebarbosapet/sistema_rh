@@ -8,4 +8,8 @@ public interface Calculo {
     default void calculofgts(){
 
     }
+
+    default void calculoinss(){
+        
+    }
     }
