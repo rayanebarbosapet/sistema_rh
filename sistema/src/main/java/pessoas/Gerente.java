@@ -17,9 +17,9 @@ public class Gerente extends Funcionarios implements Calculo {
    
  
 
-    public Gerente(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user,
-            String Key, String totalFuncionarios, String senhaEspecial, Salario salario, Tributos valor) {
-        super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key);
+    public Gerente(String nome, String cpf, String tel, int id, String cargo, String string, String user,
+            String Key, String totalFuncionarios, String senhaEspecial, Salario salario) {
+        super(nome, cpf, tel, id, cargo, string, user);
         this.totalFuncionarios = totalFuncionarios;
         this.senhaEspecial = senhaEspecial;
     }

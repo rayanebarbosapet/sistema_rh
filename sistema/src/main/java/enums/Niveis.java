@@ -1,11 +1,18 @@
 package enums;
 
 public enum Niveis {
-    ALTO, MEDIO, BAIXO;
+ALTO("gerente"), MEDIO("supervidor"), BAIXO("atendente");
 
-    private Niveis() {
+String niveisSeguranca;
+
+    private Niveis(String niveisSeguranca) {
+        this.niveisSeguranca=niveisSeguranca;
     
     }
 
+
+    public String getNiveisSeguranca() {
+        return niveisSeguranca;
+    }
     
 }

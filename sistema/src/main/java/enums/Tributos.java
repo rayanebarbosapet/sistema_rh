@@ -6,7 +6,7 @@ public enum Tributos {
     
     private Double valor;
 
-    private Tributos(Double valor) {
+ Tributos(Double valor) {
         this.valor=valor;
     }
 

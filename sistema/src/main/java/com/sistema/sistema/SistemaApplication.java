@@ -2,17 +2,23 @@ package com.sistema.sistema;
 import pessoas.*;
 
 
+import javax.xml.crypto.Data;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import enums.Salario;
 
 @SpringBootApplication
 public class SistemaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SistemaApplication.class, args);
-	
-	 Atendente at = new Atendente(null, null, null, 0, null, null, null, null, 0, null, null, null);
-	  at.calculoFerias();
+		Gerente fun = new Gerente("rayane", "1211", "1221", 0, "gerente", "admin", "admin", "1", "7878", null, Salario.GERENTE);
+	 	Menu menu = new Menu();
+	  	menu.verificaFuncionario(fun);
+
+	 
 	}
 
 }

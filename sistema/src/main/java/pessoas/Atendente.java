@@ -20,7 +20,7 @@ public class Atendente extends Funcionarios implements Calculo{
 
     public Atendente(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user,
             String Key, double mesesTrabalhados, String codigo, enums.Salario salario, Tributos valor) {
-        super(nome, cpf, tel, id, cargo, datadeAdmissao, user, Key );
+        super(nome, cpf, tel, id, cargo, user, Key );
         this.codigo = codigo;
         Salario = salario;
         Valor = valor;

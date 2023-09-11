@@ -13,11 +13,11 @@ public abstract class Funcionarios extends Pessoas {
     
        Scanner sc = new Scanner(System.in);
    
-    public Funcionarios(String nome, String cpf, String tel, int id, String cargo, Date datadeAdmissao, String user, String Key) {
+    public Funcionarios(String nome, String cpf, String tel, int id, String cargo, String user, String Key) {
         super(nome, cpf, tel);
         this.id = id;
         this.cargo = cargo;
-        this.datadeAdmissao = datadeAdmissao;
+       // this.datadeAdmissao = string;
     }
 
     public String getCargo() {
